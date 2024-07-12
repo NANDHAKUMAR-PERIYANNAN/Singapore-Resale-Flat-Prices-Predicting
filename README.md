@@ -55,10 +55,4 @@ Develop a machine learning model and deploy it as a user-friendly web applicatio
 ## Results and Benefits
 The project benefits both potential buyers and sellers in the Singapore housing market. Buyers can estimate resale prices and make informed decisions, while sellers can understand their flat's potential market value. Additionally, the project demonstrates the practical application of machine learning in real estate and web development.
 
-## Deliverables
-- A well-trained machine learning model for resale price prediction.
-- A user-friendly web application deployed on the Render platform or any cloud platform.
-- Documentation and instructions for using the application.
-- A project report summarizing the data analysis, model development, and deployment process.
-
 ---
