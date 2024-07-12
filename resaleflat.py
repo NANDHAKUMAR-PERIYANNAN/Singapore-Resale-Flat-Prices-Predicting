@@ -19,12 +19,12 @@ def main():
     )
 
     # Display the page title at the top of your app
-    st.title(':rainbow[Singapore Flat Resale Price Predictor]')
+    st.title(':red[Singapore Flat Resale Price Predictor]')
 
     #set up the sidebar with optionmenu
-    selected = option_menu("Singapore Flat Resale | Comprehensive Analysis and Predictive Modeling",
-                                options=["Home","Get Prediction","Explore"],
-                                icons=["house","lightbulb","bar-chart-line"],
+    selected = option_menu("Singapore Flat Resale |Analysis and Predictive Modeling",
+                                options=["Home","Get Prediction"],
+                                icons=["house","lightbulb"],
                                 default_index=1,menu_icon="globe",
                                 orientation="horizontal")
         # Set up the information for 'Home' menu
@@ -33,9 +33,6 @@ def main():
         st.markdown(title_text, unsafe_allow_html=True)
         col1, col2 = st.columns([2, 1.5], gap="large")
         with col1:
-            st.markdown("### :red[Skills Takeaway]:")
-            st.markdown('<h5> Data Wrangling, EDA, Model Building, Model Deployment </h5>', unsafe_allow_html=True)
-
             st.markdown("### :red[Domain]:")
             st.markdown('<h5> Real Estate </h5>', unsafe_allow_html=True)
 
@@ -56,19 +53,19 @@ def main():
 
             st.markdown("### :red[Solution Steps]: ###")
             st.markdown("""
-                - 🔍 Collect and preprocess resale flat transaction data.
-                - 🔄 Extract relevant features and create additional features.
-                - 📈 Train a regression model on historical data.
-                - 🎯 Develop a user-friendly web application for price predictions.
+                -  Collect and preprocess resale flat transaction data.
+                -  Extract relevant features and create additional features.
+                -  Train a regression model on historical data.
+                -  Develop a user-friendly web application for price predictions.
             """)
 
             st.markdown("### :red[Data Source]: ###")
             st.markdown("### [Singapore Government Data](https://beta.data.gov.sg/collections/189/view)")
 
-        with col2:
-            st.image("https://j.gifs.com/66jXYL.gif", use_column_width=True)
-            st.write("----")
-            st.markdown("  ")
+        # with col2:
+        #     st.image("https://j.gifs.com/66jXYL.gif", use_column_width=True)
+        #     st.write("----")
+        #     st.markdown("  ")
 
 
         col1, col2 = st.columns([2, 2])
@@ -208,22 +205,6 @@ def main():
                     st.subheader(f"Predicted Resale Price is: :green[$ {resale_price_usd:.2f}]")
                     st.subheader(f"Predicted Resale Price in INR: :green[₹ {resale_price_inr:.2f}]")
 
-    # set up the information for 'Home' menu
-    if selected == "Explore":
-        st.markdown('<br>', unsafe_allow_html=True)  # Add some space before the topic
-        st.subheader(':Red[About Housing & Development Board]')
-        col1, col2 = st.columns([3, 1])
-        with col1:
-            st.info('''
-            - 🏠 The Housing & Development Board (HDB; often referred to as the Housing Board), is a statutory board under the Ministry of National Development responsible for the public housing in Singapore.
-            - Established in 1960 as a result of efforts in the late 1950s to set up an authority to take over the Singapore Improvement Trust's (SIT) public housing responsibilities.
-            - The HDB focused on the construction of emergency housing and the resettlement of kampong residents into public housing in the first few years of its existence.
-            - In the 1990s and 2000s, the HDB introduced upgrading and redevelopment schemes for mature estates, as well as new types of housing intended to cater to different income groups in partnership with private developers.
-            - The HDB was reorganized in 2003 to better suit Singapore's housing market in the 2000s.
-            ''')
-
-    st.markdown(" ")
-    st.markdown(" ")
 
 if __name__ == "__main__":
     main()
