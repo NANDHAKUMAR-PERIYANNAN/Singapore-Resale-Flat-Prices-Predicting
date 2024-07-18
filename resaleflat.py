@@ -62,11 +62,6 @@ def main():
             st.markdown("### :red[Data Source]: ###")
             st.markdown("### [Singapore Government Data](https://beta.data.gov.sg/collections/189/view)")
 
-        # with col2:
-        #     st.image("https://j.gifs.com/66jXYL.gif", use_column_width=True)
-        #     st.write("----")
-        #     st.markdown("  ")
-
 
         col1, col2 = st.columns([2, 2])
         with col1:
@@ -199,10 +194,10 @@ def main():
 
                     predict = model.predict(user_data)
                     resale_price_usd = np.exp(predict[0])
-                    resale_price_inr = resale_price_usd * 61.68
+                    resale_price_inr = resale_price_usd * 83.59
 
                     # Display the predicted selling price in USD and INR
-                    st.subheader(f"Predicted Resale Price is: :green[$ {resale_price_usd:.2f}]")
+                    st.subheader(f"Predicted Resale Price in USD: :green[$ {resale_price_usd:.2f}]")
                     st.subheader(f"Predicted Resale Price in INR: :green[₹ {resale_price_inr:.2f}]")
 
 
